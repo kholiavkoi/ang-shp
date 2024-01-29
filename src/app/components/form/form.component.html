@@ -1,0 +1,16 @@
+<h1>Form</h1>
+<form (ngSubmit)="onSubmit()">
+  <input type="text" name="name" placeholder="name" [(ngModel)]="name" >
+  <input type="email" name="email" placeholder="email" [(ngModel)]="email" >
+  <textarea type="text" name="message" placeholder="message" [(ngModel)]="message"></textarea>
+  <button>Submit</button>
+</form>
+
+<div *ngIf="isSubmitted">
+  <app-form-details
+    *ngFor="let msg of messages; let i = index"
+    [message]="msg"
+    [index]="i"
+    (delete)="deleteMessage($event)"
+  ></app-form-details>
+</div>
