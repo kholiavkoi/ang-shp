@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
 
   onNavigate() {
-    this.router.navigate(['about'])
+    this.router.navigate(['about']);
   }
 }

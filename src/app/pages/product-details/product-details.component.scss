@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid gray;
+  max-width: fit-content;
+  margin: 10px 0;
+}
+
+div img {
+  max-width: 100px;
+}
